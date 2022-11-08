@@ -8,7 +8,7 @@
         <title>Frogger Game</title>
         <!-- <link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css"> -->
         <link rel="stylesheet" href="css/styles.css" type="text/css">
-        <link rel="icon" href="#" title="shape sorter icon">
+        <link rel="icon" href="img/frog.png" title="frogger game icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Noto+Sans+Display:wght@100&display=swap" rel="stylesheet">
@@ -18,7 +18,12 @@
   <!-- body starts -->
   <body class="">
     <main>
-     <div class="grid">
+
+       <h3> Seconds Left: <span id="time-left">20</span>s</h3> 
+       <h3>Result: <span id="result">0</span></h3>
+
+       <button id="start-pause-button">Start/Pause</button>
+        <div class="grid">
         <div></div>
         <div></div>
         <div></div>
@@ -37,64 +42,73 @@
         <div></div>
         <div></div>
         <div></div>
-        <div class="log-left"></div>
-        <div class="log-left"></div>
-        <div class="log-left"></div>
-        <div class="log-left"></div>
-        <div class="log-left"></div>
-        <div class="log-left"></div>
-        <div class="log-left"></div>
-        <div class="log-left"></div>
-        <div class="log-left"></div>
-
-        <div class="log-right"></div>
-        <div class="log-right"></div>
-        <div class="log-right"></div>
-        <div class="log-right"></div>
-        <div class="log-right"></div>
-        <div class="log-right"></div>
-        <div class="log-right"></div>
-        <div class="log-right"></div>
-        <div class="log-right"></div>
-
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-
-        <div class="car-left"></div>
-        <div class="car-left"></div>
-        <div class="car-left"></div>
-        <div class="car-left"></div>
-        <div class="car-left"></div>
-        <div class="car-left"></div>
-        <div class="car-left"></div>
-        <div class="car-left"></div>
-        <div class="car-left"></div>
-
-        <div class="car-right"></div>
-        <div class="car-right"></div>
-        <div class="car-right"></div>
-        <div class="car-right"></div>
-        <div class="car-right"></div>
-        <div class="car-right"></div>
-        <div class="car-right"></div>
-        <div class="car-right"></div>
-        <div class="car-right"></div>
-
+        <!-- LOGS GOING LEFT  -->
+        <div class="log-left l1"></div>
+        <div class="log-left l2"></div>
+        <div class="log-left l3"></div>
+        <div class="log-left l4"></div>
+        <div class="log-left l5"></div>
+        <div class="log-left l1"></div>
+        <div class="log-left l2"></div>
+        <div class="log-left l3"></div>
+        <div class="log-left l4"></div>
+        <!-- LOGS GOING RIGHT  -->
+        <div class="log-right l5"></div>
+        <div class="log-right l1"></div>
+        <div class="log-right l2"></div>
+        <div class="log-right l3"></div>
+        <div class="log-right l4"></div>
+        <div class="log-right l5"></div>
+        <div class="log-right l1"></div>
+        <div class="log-right l2"></div>
+        <div class="log-right l3"></div>
 
         <div></div>
         <div></div>
         <div></div>
         <div></div>
         <div></div>
-        <div class="starting-block"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+            <!-- CARS GOING LEFT  -->
+        <div class="car-left c1"></div>
+        <div class="car-left c2"></div>
+        <div class="car-left c3"></div>
+        <div class="car-left c1"></div>
+        <div class="car-left c2"></div>
+        <div class="car-left c3"></div>
+        <div class="car-left c1"></div>
+        <div class="car-left c2"></div>
+        <div class="car-left c3"></div>
+        
+            <!-- CARS GOING RIGHT  -->
+        <div class="car-right c1"></div>
+        <div class="car-right c2"></div>
+        <div class="car-right c3"></div>
+        <div class="car-right c1"></div>
+        <div class="car-right c2"></div>
+        <div class="car-right c3"></div>
+        <div class="car-right c1"></div>
+        <div class="car-right c2"></div>
+        <div class="car-right c3"></div>
+
+        
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div> 
+        <div></div>    
+        <div class="starting-block frog"></div>      
         <div></div>
         <div></div>
         <div></div>
@@ -107,7 +121,7 @@
 
     </main> 
         <!-- <script type="text/javascript" src="js/app.js"></script> -->
-        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
   </body>
 
  

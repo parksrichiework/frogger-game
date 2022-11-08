@@ -15,9 +15,12 @@
     --atomic-tangerine: #F49D6E;
     --atomic-tangerine-opacity: #f49d6e6c;
     --black: #252525;
-    --black-8e: #25252536;
+    --light-black: #25252536;
     --no-opacity: #ffffff00;
     --white: #ffffff;
+    --brown: #A57548;
+    --blue: #82DDF0;
+    --onyx: #3C3C3C;
    }
    
    
@@ -44,4 +47,45 @@ body {
     height:20px;
     width: 20px;
     
+}
+
+.ending-block{
+    background-color: var(--fiery-rose);
+}
+
+.starting-block{
+    background-color: var(--celadon-blue);
+}
+
+/* .log-left,
+.log-right {
+    background-color: var(--blue);
+} */
+
+/* .car-left,
+.car-right{
+    background-color: var(--black-8e);
+} */
+
+.frog{
+    background-color: var(--lime-green);
+}
+
+.l1,
+.l2,
+.l3{
+    background-color: var(--brown);
+}
+
+.l4,
+.l5{
+    background-color: var(--blue);
+}
+
+.c1{
+    background-color: var(--onyx);
+}
+.c2,
+.c3{
+    background-color: var(--light-black);
 }
