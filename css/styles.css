@@ -34,6 +34,33 @@ body {
      color: var(--darker-purple);
      
    }
+   main,
+   main .div{
+
+    text-align: center;
+   }
+   .grid-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   }
+
+.not-paused{
+    color: var(--white);
+    background-color: var(--darker-purple);
+    margin-bottom: 30px;
+    padding: 10px 32px;
+    border-radius: 20px;
+}
+
+.paused{
+    color: var(--darker-purple);
+    background-color: var(--white);
+    margin-bottom: 30px;
+    padding: 10px 32px;
+    border-radius: 20px;
+    border: 1px solid var(--darker-purple);
+}
 
 .grid{
     border: 1px solid var(--black);
@@ -41,6 +68,8 @@ body {
     width: 180px;
     display: flex;
     flex-wrap: wrap;
+   
+    
 }
 
 .grid div{
@@ -48,6 +77,7 @@ body {
     width: 20px;
     
 }
+
 
 .ending-block{
     background-color: var(--fiery-rose);
@@ -57,19 +87,7 @@ body {
     background-color: var(--celadon-blue);
 }
 
-/* .log-left,
-.log-right {
-    background-color: var(--blue);
-} */
 
-/* .car-left,
-.car-right{
-    background-color: var(--black-8e);
-} */
-
-.frog{
-    background-color: var(--lime-green);
-}
 
 .l1,
 .l2,
@@ -89,3 +107,43 @@ body {
 .c3{
     background-color: var(--light-black);
 }
+
+.frog{
+    background-color: var(--lime-green);
+}
+
+
+/* FOOTER STYLES */
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+footer div a{
+    margin: 20px 0px 30px;
+    color: var(--white);
+    padding: 10px 32px;
+    border-radius: 20pt;
+    background: var(--fiery-rose);
+     background: -moz-linear-gradient(45deg, var(--fiery-rose) 0%, var(--celadon-blue) 100%);
+     background: -webkit-gradient(left bottom, right top, color-stop(0%, var(--fiery-rose)), color-stop(100%, var(--celadon-blue)));
+     background: -webkit-linear-gradient(45deg, var(--fiery-rose) 0%, var(--celadon-blue) 100%);
+     background: -o-linear-gradient(45deg, var(--fiery-rose) 0%, var(--celadon-blue) 100%);
+     background: -ms-linear-gradient(45deg, var(--fiery-rose) 0%, var(--celadon-blue) 100%);
+     background: linear-gradient(45deg, var(--fiery-rose) 0%, var(--celadon-blue) 100%);
+     background-size: 400% 400%;
+     -webkit-animation: errorBg 55s ease infinite;
+     -moz-animation: errorBg 55s ease infinite;
+     animation: errorBg 55s ease infinite;
+     height: auto;
+     transition: 0.3s ease-in-out;
+     text-decoration: none;
+}
+
+.services-about{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* FOOTER STYLES END  */
