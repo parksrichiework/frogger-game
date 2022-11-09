@@ -166,11 +166,17 @@ button .not-paused{
 
 
 .ending-block{
-    background-color: var(--fiery-rose);
+    background-color: var(--lime-green);
+    background-image: url(../img/lily-pad-full.jpg);
+    background-position: center;
+    background-size: contain;
 }
 
 .starting-block{
-    background-color: var(--celadon-blue);
+    background-color: var(--fiery-rose);
+    /* background-image: url(../img/lily-pad-full.jpg); */
+    background-position: center;
+    background-size: contain;
 }
 
 
@@ -179,6 +185,9 @@ button .not-paused{
 .l2,
 .l3{
     background-color: var(--brown);
+    background-image: url(../img/log-texture.jfif);
+    background-position: center;
+    /* background-size:contain; */
 }
 
 .l4,
@@ -189,20 +198,21 @@ button .not-paused{
 .c1{
     background-color: var(--light-black);
     background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; */
+    background-size: contain;
+    background-repeat: no-repeat;
   
 }
 
 .car-left.c1{    
-    background-image: url(../img/car.jpg);
-    transform: rotate(180deg);
+    background-image: url(../img/car-left.png);
+    transform: rotate(-90deg);
     
 }
 
 .car-right.c1{
         
-        background-image: url(../img/car.jpg);
+        background-image: url(../img/car-right.png);
+        transform: rotate(90deg);
         
     }
 
@@ -213,7 +223,10 @@ button .not-paused{
 }
 
 .frog{
-    background-color: var(--lime-green);
+    
+    background-image: url(../img/frog-character.png);
+    background-position: center;
+    background-size: contain;
     
 }
 
