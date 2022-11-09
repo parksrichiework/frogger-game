@@ -270,25 +270,13 @@ function frogOnLog(){
        (squares[currentIndex].classList.contains('l2') && squares[currentIndex].classList.contains('frog')) ||
        (squares[currentIndex].classList.contains('l3') && squares[currentIndex].classList.contains('frog'))){        
         
-        squares[currentIndex].classList.remove('l1')
-        squares[currentIndex].classList.remove('l2')
-        squares[currentIndex].classList.remove('l3')
+        squares[currentIndex].style.backgroundImg='url(../img/frog-character.png)'
         squares[currentIndex].classList.add('frog-on-log')
-    } else {
-        
-        logsRight.classList.remove('frog-on-log')
-        logsLeft.classList.remove('frog-on-log')
-        logsRight.classList.add('l1')    
-        logsRight.classList.add('l2')    
-        logsRight.classList.add('l3')
-        logsLeft.classList.add('l1')    
-        logsLeft.classList.add('l2')    
-        logsLeft.classList.add('l3')
         
         
-    }
+    }        
+    squares[currentIndex].classList.remove('frog-on-log')               
         
-    
 }
 
 
