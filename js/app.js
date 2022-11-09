@@ -63,18 +63,33 @@ function moveFrog(e){
 }
 // move frog with buttons
 
-// document.addEventListener('click', moveFrogMobile)
+document.addEventListener('mousedown', moveFrogMobile)
 
-// function moveFrogMobile(e){
+function moveFrogMobile(e){
+   
+    squares[currentIndex].classList.remove('frog')
 
-//     squares[currentIndex].classList.remove('frog')
+    if(e.target.classList.contains('left-button') &&
+        currentIndex % width !== 0){       
+            currentIndex -= 1
+    }
+    if(e.target.classList.contains('right-button') &&
+        currentIndex % width < width -1){
+        currentIndex += 1 
+    } 
+    
+    if(e.target.classList.contains('up-button') &&
+        currentIndex - width >= 0){
+        currentIndex -= width
+    }
+    if(e.target.classList.contains('down-button') &&
+    currentIndex + width < width * width){
+        currentIndex += width
+    }
+   
 
-//     if(e.target == leftButton){
-//         console.log=('moved left')
-//     }
-
-//     squares[currentIndex].classList.add('frog')   
-// }
+    squares[currentIndex].classList.add('frog')
+}
     
 
     
@@ -199,6 +214,7 @@ function lose(){
         clearInterval(timerId)
         squares[currentIndex].classList.remove('frog')
         document.removeEventListener('keyup', moveFrog)
+        document.removeEventListener('keyup', moveFrogMobile)
         clearInterval(outcomeTimerId)
         startPauseButton.textContent= "T__T"
     }
@@ -212,6 +228,7 @@ function win(){
         resultDisplay.textContent= "You Win!"
         clearInterval(timerId)
         document.removeEventListener('keyup', moveFrog)
+        document.removeEventListener('keyup', moveFrogMobile)
         clearInterval(outcomeTimerId)
         startPauseButton.textContent= "^__^"
     }
@@ -225,12 +242,14 @@ startPauseButton.addEventListener('click', ()=> {
         clearInterval(outcomeTimerId)
         timerId= null
         document.removeEventListener('keyup', moveFrog)
+        document.removeEventListener('keyup', moveFrogMobile)
         startPauseButton.classList.remove('paused')
         startPauseButton.classList.add('not-paused')
         startPauseButton.textContent= 'Start'
     } else{
     timerId = setInterval(autoMoveElements, 1000)
     document.addEventListener('keyup', moveFrog)
+    document.addEventListener('keyup', moveFrogMobile)
     outcomeTimerId = setInterval(checkOutcomes, 50)
     startPauseButton.classList.remove('notpaused')
     startPauseButton.classList.add('paused')
@@ -238,4 +257,7 @@ startPauseButton.addEventListener('click', ()=> {
     }
 
 })
+
+document.removeEventListener('keyup', moveFrog)
+document.removeEventListener('keyup', moveFrogMobile)
 // timerId= setInterval(autoMoveElements, 1000)
