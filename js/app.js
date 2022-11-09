@@ -7,6 +7,11 @@ const logsRight= document.querySelectorAll('.log-right')
 const carsLeft= document.querySelectorAll('.car-left')
 const carsRight= document.querySelectorAll('.car-right')
 
+const leftButton = document.querySelector('.left-button')
+const rightButton = document.querySelector('.right-button')
+const upButton = document.querySelector('.up-button')
+const downButton = document.querySelector('.down-button')
+
 
 
 let currentIndex = 76
@@ -16,9 +21,15 @@ let timerId
 let outcomeTimerId
 
 // ---------------------MOVE THE FROG 
+
+// move fog with arrow keys
+document.addEventListener('keyup', moveFrog)
+
 function moveFrog(e){
+
     squares[currentIndex].classList.remove('frog')
-   
+    
+      
     switch(e.key){
         case 'ArrowLeft':
             console.log('move left')
@@ -45,11 +56,34 @@ function moveFrog(e){
             } 
             break               
          }
+
+
     squares[currentIndex].classList.add('frog')
     
 }
+// move frog with buttons
 
-document.addEventListener('keyup', moveFrog)
+// document.addEventListener('click', moveFrogMobile)
+
+// function moveFrogMobile(e){
+
+//     squares[currentIndex].classList.remove('frog')
+
+//     if(e.target == leftButton){
+//         console.log=('moved left')
+//     }
+
+//     squares[currentIndex].classList.add('frog')   
+// }
+    
+
+    
+
+
+
+
+
+
 
 // -------------------------------MOVE LOGS AND CARS
 function autoMoveElements(){

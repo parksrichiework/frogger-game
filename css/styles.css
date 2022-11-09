@@ -32,23 +32,41 @@ body {
      font-family: Inconsolata, sans-serif;
      font-size: 15px;
      color: var(--darker-purple);
+     margin: 0;
      
    }
+
+   main{
+    margin: 0;
+   }
+
    main,
    main .div{
 
     text-align: center;
    }
+
+   .game-title{
+    background-color: var(--atomic-tangerine);
+    margin: 0;
+    padding: 30px 0px;
+   }
+
    .grid-container{
     width: 100%;
     display: flex;
     justify-content: center;
    }
 
+button .paused,
+button .not-paused{
+    margin-top: 60px;
+}   
+
 .not-paused{
     color: var(--white);
     background-color: var(--darker-purple);
-    margin-bottom: 30px;
+    margin: 0px 0px 30px;
     padding: 10px 32px;
     border-radius: 20px;
 }
@@ -56,7 +74,7 @@ body {
 .paused{
     color: var(--darker-purple);
     background-color: var(--white);
-    margin-bottom: 30px;
+    margin: 0px 0px 30px;
     padding: 10px 32px;
     border-radius: 20px;
     border: 1px solid var(--darker-purple);
@@ -68,7 +86,8 @@ body {
     width: 180px;
     display: flex;
     flex-wrap: wrap;
-   
+    transform: scale(2.3);
+    margin-top: 160px;   
     
 }
 
@@ -110,13 +129,19 @@ body {
 
 .frog{
     background-color: var(--lime-green);
+    
+}
+
+.directions-container{
+    display: none;
 }
 
 
-/* FOOTER STYLES */
+/*----------------------- FOOTER STYLES */
 footer{
     display: flex;
     justify-content: center;
+    margin-top: 175px;
 }
 
 footer div a{
@@ -147,3 +172,51 @@ footer div a{
     justify-content: center;
 }
 /* FOOTER STYLES END  */
+
+/*---------------------------- MOBILE STYLES BEGIN */
+
+@media only screen and (max-width: 600px) {
+  body {
+    width: 100%;
+  }
+
+  .grid{
+    transform: scale(2.1);
+    margin-top: 80px;
+  }
+
+  .directions-container{
+    display: block;
+    margin-top: 150px;
+}
+
+.left-right-buttons-container{
+    display: flex;
+    width: 390px;
+    justify-content: space-evenly;
+    
+}
+.left-button,
+.right-button,
+.up-button,
+.down-button{
+    background-color: var(--dark-sea-green);
+    color: var(--white);
+    border: 1px solid var(--dark-sea-green);
+    padding: 12px 32px;
+    border-radius: 30px;
+}
+
+  footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+}
+
+
+
+      
+
+/* MOBILE STYLES END */
