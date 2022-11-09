@@ -57,6 +57,73 @@ body {
     display: flex;
     justify-content: center;
    }
+   .directions-box{
+    display: flex;
+    justify-content: center;
+     
+    width: auto;
+    height: auto;
+}
+
+.directions{
+	display: block;
+    margin-top: 15vh;
+	background-color: var(--blue);
+	color: var(--black);
+	position: absolute;
+	z-index: 10;
+	padding: 20px 30px;
+	width: 300px;
+	transition: 0.2s ease-in-out;
+	text-align: center;
+	border-radius: 20px;
+	box-shadow: 0px 7px 7px var(--darker-purple);
+	-webkit-text-stroke-width: none;
+}
+
+.mobile-directions{
+    display: none;
+}
+
+.desktop-directions{
+    display: block;
+}
+
+.close-directions{
+	background-color: var(--darker-purple);
+	color: var(--white);
+	border: solid 2px var(--blue);
+	border-radius: 50px;
+	width: 100%;
+	/* padding: 10px 10px; */
+}
+
+.close-directions:hover{
+	background-color: var(--blue);
+	color: var(--darker-purple);
+	border: solid 2px var(--darker-purple);
+    cursor: pointer;
+}
+
+.closed{
+	display: none;
+	transition: 0.2s ease-in-out;
+}
+
+.directions-modal-bg{
+	background-color: var(--darker-purple-opacity);
+    background-size: cover;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+	position: absolute;
+	margin: 0;
+	transition: 0.2s ease-in-out;
+}
+
+
+
+
 
 button .paused,
 button .not-paused{
@@ -120,8 +187,26 @@ button .not-paused{
 }
 
 .c1{
-    background-color: var(--onyx);
+    background-color: var(--light-black);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+  
 }
+
+.car-left.c1{    
+    background-image: url(../img/car.jpg);
+    transform: rotate(180deg);
+    
+}
+
+.car-right.c1{
+        
+        background-image: url(../img/car.jpg);
+        
+    }
+
+
 .c2,
 .c3{
     background-color: var(--light-black);
@@ -179,6 +264,21 @@ footer div a{
   body {
     width: 100%;
   }
+
+  .directions{		
+    top: 25%;
+    /* left: 7%; */
+    width: 20em;
+    padding: 20px 30px;
+}
+
+.mobile-directions{
+    display: block;
+}
+
+.desktop-directions{
+    display: none;
+}
 
   .grid{
     transform: scale(2.1);

@@ -261,3 +261,20 @@ startPauseButton.addEventListener('click', ()=> {
 document.removeEventListener('keyup', moveFrog)
 document.removeEventListener('keyup', moveFrogMobile)
 // timerId= setInterval(autoMoveElements, 1000)
+
+alert('Let\'s get jumping!');
+
+//------------------------------------- close directions modal 
+
+let closeDirections = document.querySelector('#close-button');
+let directions = document.querySelector('#game-directions');
+let directionsModal = document.querySelector('#game-directions-modal')
+
+closeDirections.addEventListener('click', closeBox);
+
+function closeBox(){
+         directions.classList.add('closed');
+         directionsModal.classList.add('closed')
+         console.log('closed the directions');
+                             
+   }
