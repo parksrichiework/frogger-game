@@ -165,6 +165,38 @@ button .not-paused{
 }
 
 
+.frog{    
+    background-image: url(../img/frog-character.png);
+    background-position: center;
+    background-size: contain;
+    
+}
+
+.frog-on-log{
+    z-index: 10;
+    background-color: var(--brown);
+    background-image: url(../img/frog-character.png);
+    background-position: center;
+    background-size: contain;
+}
+
+.frog-lose{    
+    z-index: 10;
+    background-image: url(../img/frog-lose.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+
+.frog-win{    
+    z-index: 10;
+    background-image: url(../img/frog-win.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .ending-block{
     background-color: var(--lime-green);
     background-image: url(../img/lily-pad-full.jpg);
@@ -222,13 +254,7 @@ button .not-paused{
     background-color: var(--light-black);
 }
 
-.frog{
-    
-    background-image: url(../img/frog-character.png);
-    background-position: center;
-    background-size: contain;
-    
-}
+
 
 .directions-container{
     display: none;

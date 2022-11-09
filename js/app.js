@@ -114,6 +114,7 @@ function autoMoveElements(){
 function checkOutcomes(){
     lose()
     win()
+    frogOnLog()
 }
 
 // --------------------------------MOVE logs LEFT 
@@ -213,8 +214,10 @@ function lose(){
         resultDisplay.textContent= 'You Lose!'
         clearInterval(timerId)
         squares[currentIndex].classList.remove('frog')
+        squares[currentIndex].classList.remove('c1')
+        squares[currentIndex].classList.add('frog-lose')
         document.removeEventListener('keyup', moveFrog)
-        document.removeEventListener('keyup', moveFrogMobile)
+        document.removeEventListener('mousedown', moveFrogMobile)
         clearInterval(outcomeTimerId)
         startPauseButton.textContent= "T__T"
     }
@@ -226,6 +229,9 @@ function win(){
         squares[currentIndex].classList.contains('ending-block')
     ){
         resultDisplay.textContent= "You Win!"
+        squares[currentIndex].classList.remove('frog')
+        squares[currentIndex].classList.remove('ending-block')
+        squares[currentIndex].classList.add('frog-win')
         clearInterval(timerId)
         document.removeEventListener('keyup', moveFrog)
         document.removeEventListener('keyup', moveFrogMobile)
@@ -235,21 +241,21 @@ function win(){
 
 }
 
-
+//--------------------------- start/pasue button function
 startPauseButton.addEventListener('click', ()=> {
     if(timerId){
         clearInterval(timerId)
         clearInterval(outcomeTimerId)
         timerId= null
         document.removeEventListener('keyup', moveFrog)
-        document.removeEventListener('keyup', moveFrogMobile)
+        document.removeEventListener('mousedown', moveFrogMobile)
         startPauseButton.classList.remove('paused')
         startPauseButton.classList.add('not-paused')
         startPauseButton.textContent= 'Start'
     } else{
     timerId = setInterval(autoMoveElements, 1000)
     document.addEventListener('keyup', moveFrog)
-    document.addEventListener('keyup', moveFrogMobile)
+    document.addEventListener('mousedown', moveFrogMobile)
     outcomeTimerId = setInterval(checkOutcomes, 50)
     startPauseButton.classList.remove('notpaused')
     startPauseButton.classList.add('paused')
@@ -257,6 +263,20 @@ startPauseButton.addEventListener('click', ()=> {
     }
 
 })
+
+//check to see if frog is on log
+function frogOnLog(){
+    if((squares[currentIndex].classList.contains('l1') & squares[currentIndex].classList.contains('frog'))){        
+        squares[currentIndex].classList.add('frog-on-log')
+    } else{    
+        logsRight.classList.remove('frog-on-log')        
+        logsLeft.classList.remove('frog-on-log')
+    }
+        
+    
+}
+
+
 
 document.removeEventListener('keyup', moveFrog)
 document.removeEventListener('keyup', moveFrogMobile)
