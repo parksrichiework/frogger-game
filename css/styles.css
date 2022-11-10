@@ -71,6 +71,10 @@ body {
     height: auto;
 }
 
+/* .play-again-directions{
+    display: none;
+} */
+
 .directions{
 	display: block;
     margin-top: 15vh;
