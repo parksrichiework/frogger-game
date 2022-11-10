@@ -71,9 +71,9 @@ body {
     height: auto;
 }
 
-/* .play-again-directions{
+.play-again-directions{
     display: none;
-} */
+}
 
 .directions{
 	display: block;

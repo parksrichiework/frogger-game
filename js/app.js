@@ -13,7 +13,7 @@ const upButton = document.querySelector('.up-button')
 const downButton = document.querySelector('.down-button')
 let gameOver= document.querySelector('#game-over-message')
 const playAgain= document.querySelector('.play-again-box')
-
+const playAgainDirections= document.querySelector('.play-again-directions')
 
 
 let currentIndex = 76
@@ -228,6 +228,7 @@ function lose(){
         gameOver.textContent= "Oops! Watch out for cars and water!"
         playAgain.style.display= 'flex'
         playAgainModal.style.display= 'flex'
+        
     }
 
     
