@@ -11,6 +11,8 @@ const leftButton = document.querySelector('.left-button')
 const rightButton = document.querySelector('.right-button')
 const upButton = document.querySelector('.up-button')
 const downButton = document.querySelector('.down-button')
+let gameOver= document.querySelector('#game-over-message')
+const playAgain= document.querySelector('.play-again-box')
 
 
 
@@ -141,6 +143,7 @@ function moveLogLeft(logLeft){
         logLeft.classList.add('l1')
         break    
     }
+
 }
 // -----------------------------------MOVE LOGs RIGHT 
 function moveLogRight(logRight){
@@ -205,6 +208,8 @@ function moveCarRight(carRight){
 }
 // ------------------------------ check to see if you lose
 function lose(){
+    
+
     if(
         squares[currentIndex].classList.contains('c1') ||
         squares[currentIndex].classList.contains('l4') ||
@@ -220,7 +225,12 @@ function lose(){
         document.removeEventListener('mousedown', moveFrogMobile)
         clearInterval(outcomeTimerId)
         startPauseButton.textContent= "T__T"
+        gameOver.textContent= "Oops! Watch out for cars and water!"
+        playAgain.style.display= 'flex'
+        playAgainModal.style.display= 'flex'
     }
+
+    
 }
 
 // ----------------------- check to see if you win
@@ -237,6 +247,9 @@ function win(){
         document.removeEventListener('keyup', moveFrogMobile)
         clearInterval(outcomeTimerId)
         startPauseButton.textContent= "^__^"
+        gameOver.textContent= "Nice Job!"
+        playAgain.style.display= 'flex'
+        playAgainModal.style.display= 'flex'
     }
 
 }
@@ -289,12 +302,14 @@ alert('Let\'s get jumping!');
 let closeDirections = document.querySelector('#close-button');
 let directions = document.querySelector('#game-directions');
 let directionsModal = document.querySelector('#game-directions-modal')
+let playAgainModal= document.querySelector('#play-again-modal')
 
 closeDirections.addEventListener('click', closeBox);
 
 function closeBox(){
          directions.classList.add('closed');
          directionsModal.classList.add('closed')
+         playAgainModal.classList.add('closed')
          console.log('closed the directions');
                              
    }

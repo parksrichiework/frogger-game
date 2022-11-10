@@ -57,10 +57,16 @@ body {
     display: flex;
     justify-content: center;
    }
-   .directions-box{
+.directions-box{
     display: flex;
-    justify-content: center;
-     
+    justify-content: center;     
+    width: auto;
+    height: auto;
+}
+
+.play-again-box{
+    display: none;
+    justify-content: center;     
     width: auto;
     height: auto;
 }
@@ -98,7 +104,15 @@ body {
 	/* padding: 10px 10px; */
 }
 
-.close-directions:hover{
+.close-directions a{
+    text-decoration: none;
+    color: var(--white);
+
+    
+}
+
+.close-directions:hover,
+.close-directions a:hover{
 	background-color: var(--blue);
 	color: var(--darker-purple);
 	border: solid 2px var(--darker-purple);
@@ -110,7 +124,8 @@ body {
 	transition: 0.2s ease-in-out;
 }
 
-.directions-modal-bg{
+.directions-modal-bg,
+.play-again-modal-bg{
 	background-color: var(--darker-purple-opacity);
     background-size: cover;
 	width: 100%;
@@ -120,9 +135,6 @@ body {
 	margin: 0;
 	transition: 0.2s ease-in-out;
 }
-
-
-
 
 
 button .paused,
@@ -136,6 +148,7 @@ button .not-paused{
     margin: 0px 0px 30px;
     padding: 10px 32px;
     border-radius: 20px;
+    border: 1px solid var(--darker-purple);
 }
 
 .paused{
@@ -217,7 +230,8 @@ button .not-paused{
 .l2,
 .l3{
     background-color: var(--brown);
-    background-image: url(../img/log-texture.jfif);
+    /* border: solid 1px var(--black); */
+    /* background-image: url(../img/log-texture.jfif); */
     background-position: center;
     /* background-size:contain; */
 }

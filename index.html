@@ -18,6 +18,7 @@
   <!-- body starts -->
   <body class="">
     <span class="directions-modal-bg" id="game-directions-modal"></span>
+    <span class="play-again-modal-bg" id="play-again-modal"></span>
     <main>
         <div class="directions-box">
             <div class="directions" id="game-directions">
@@ -31,12 +32,25 @@
             </div>
           </div>
 
+          <div class="play-again-box">
+            <div class="directions" id="game-directions play-again">
+              <div>
+              <h2><span class="game-over" id="game-over-message"></span></h2>
+              
+            </div>
+              <div>
+                <a href='https://parksrichiework.github.io/frogger-game/'><button class="close-directions" id="close-button"><h3>Play Again!</h3></button></a>
+              </div>
+            </div>
+          </div>
+
         <h1 class="game-title">Frogger Game</h1>
 
        <h3> Seconds Left: <span id="time-left">20</span>s</h3> 
        <h3>Result: <span id="result"></span></h3>
 
-       <button class="not-paused" id="start-pause-button">Start</button>
+       <button class="not-paused" id="start-pause-button">Start</button><br>
+       
        <div class="grid-container">
         <div class="grid">
         <div></div>
