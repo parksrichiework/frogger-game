@@ -114,7 +114,7 @@ function autoMoveElements(){
 function checkOutcomes(){
     lose()
     win()
-    frogOnLog()
+    // frogOnLog()
 }
 
 // --------------------------------MOVE logs LEFT 
@@ -139,7 +139,7 @@ function moveLogLeft(logLeft){
     case logLeft.classList.contains('l5'):
         logLeft.classList.remove('l5')
         logLeft.classList.add('l1')
-        break
+        break    
     }
 }
 // -----------------------------------MOVE LOGs RIGHT 
@@ -265,19 +265,16 @@ startPauseButton.addEventListener('click', ()=> {
 })
 
 //check to see if frog is on log
-function frogOnLog(){
-    if((squares[currentIndex].classList.contains('l1') && squares[currentIndex].classList.contains('frog')) ||
-       (squares[currentIndex].classList.contains('l2') && squares[currentIndex].classList.contains('frog')) ||
-       (squares[currentIndex].classList.contains('l3') && squares[currentIndex].classList.contains('frog'))){        
+// function frogOnLog(){
+//     if((squares[currentIndex].classList.contains('l1') && squares[currentIndex].classList.contains('frog')) ||
+//        (squares[currentIndex].classList.contains('l2') && squares[currentIndex].classList.contains('frog')) ||
+//        (squares[currentIndex].classList.contains('l3') && squares[currentIndex].classList.contains('frog'))){        
         
-        squares[currentIndex].style.backgroundImg='url(../img/frog-character.png)'
-        squares[currentIndex].classList.add('frog-on-log')
+//         squares[currentIndex].classList.toggle('frog-on-log')
+//     } 
         
-        
-    }        
-    squares[currentIndex].classList.remove('frog-on-log')               
-        
-}
+    
+// }
 
 
 
